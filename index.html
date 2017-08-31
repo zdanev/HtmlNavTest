@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Html Nav Test</h1>
+
+    <!-- nav -->
+    <div id="__nav">
+        <button class="nav-button" nav-url="page1.html">Page 1</button>
+        <button class="nav-button" nav-url="page2.html">Page 2</button>
+        <button class="nav-button" nav-url="page3.html">Page 3</button>
+    </div>
+
+    <!-- content -->
+    <div id="__content">
+        <h3>Home Page</h3>
+    </div>
+
+    <script>
+        $(".nav-button").click((e) => {
+            // debugger;
+            var url = $(e.target).attr("nav-url");
+            if (url) {
+                $("#__content").load(url);
+            }
+        });
+    </script>
+</body>
+
+</html>
